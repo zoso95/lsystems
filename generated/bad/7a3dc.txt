@@ -1,0 +1,1 @@
+{"rules": {"A": "FF-FAA"}, "number_iterations": 3, "angle": 90.0, "axiom": "A", "filename": "generated/7a3dc"}

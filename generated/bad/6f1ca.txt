@@ -1,0 +1,1 @@
+{"rules": {"A": "AAAF--FAF"}, "number_iterations": 5, "angle": 90.0, "axiom": "A", "filename": "generated/6f1ca"}

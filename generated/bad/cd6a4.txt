@@ -1,0 +1,1 @@
+{"rules": {"A": "AAFA-+-"}, "number_iterations": 6, "angle": 25.0, "axiom": "A", "filename": "generated/cd6a4"}

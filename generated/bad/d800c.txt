@@ -1,0 +1,1 @@
+{"rules": {"A": "AAF+-F++F"}, "number_iterations": 5, "angle": 25.0, "axiom": "A", "filename": "generated/d800c"}

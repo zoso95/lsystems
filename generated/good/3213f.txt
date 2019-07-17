@@ -1,0 +1,1 @@
+{"rules": {"A": "F-A-FFFA"}, "number_iterations": 6, "angle": 90.0, "axiom": "A", "filename": "generated/3213f"}

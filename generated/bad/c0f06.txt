@@ -1,0 +1,1 @@
+{"rules": {"A": "FA+AF+"}, "number_iterations": 3, "angle": 90.0, "axiom": "A", "filename": "generated/c0f06"}

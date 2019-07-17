@@ -1,9 +1,41 @@
 import numpy as np
+import matplotlib
+matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 from util import *
 
-# 2D
+
+def render2d_and_save(string, alpha, delta=1, init_direction=np.array([1., 0]), colors={}, fname=''):
+	plt.gca().set_aspect('equal', adjustable='box')
+	pos = np.zeros(2, dtype=np.float64)
+	direction = init_direction
+	color = 'k'
+	saved_states = []
+	for x in string:
+		if x == 'F':
+			new_pos = pos + direction
+			plt.plot([pos[0], new_pos[0]], [pos[1], new_pos[1]], c=color)
+			pos = new_pos
+		elif x == '+':
+			direction = rotate(direction, alpha)
+		elif x == '-':
+			direction = rotate(direction, -alpha)
+		elif x == '*':
+			direction *= delta
+		elif x == '/':
+			direction /= delta
+		elif x == '|':
+			direction = rotate(direction, 180)
+		elif x == '[':
+			saved_states.append((pos, direction))
+		elif x == ']':
+			pos, direction = saved_states.pop()
+		elif x in colors:
+			color = colors[x]
+	#plt.show()
+	plt.savefig(fname)
+	plt.gcf().clear()
 
 def plot2d(string, alpha, delta=1, init_direction=np.array([1., 0]), colors={}):
 	plt.gca().set_aspect('equal', adjustable='box')
